@@ -10,19 +10,19 @@ public class ReferencesFactoryTest {
 
     @Test
     public void testReferencesFactoryIsSingleton() {
-        assertSame(FactoryReferences.getFactory(), FactoryReferences.getFactory());
+        assertSame(ReferencesFactory.getReferencesFactory(), ReferencesFactory.getReferencesFactory());
     }
 
     @Test
     public void testReferencesFactorySingletonNotNull() {
-        assertNotNull(FactoryReferences.getFactory());
+        assertNotNull(ReferencesFactory.getReferencesFactory());
     }
 
     @Test
     public void testReferencesFactory() {
-        assertEquals(0, FactoryReferences.getFactory().getReference("cero"));
-        assertEquals(1, FactoryReferences.getFactory().getReference("uno"));
-        FactoryReferences.getFactory().removeReference("cero");
-        assertEquals(2, FactoryReferences.getFactory().getReference("cero"));
+        assertEquals(0, ReferencesFactory.getReferencesFactory().getReference("cero"));
+        assertEquals(1, ReferencesFactory.getReferencesFactory().getReference("uno"));
+        ReferencesFactory.getReferencesFactory().removeReference("cero");
+        assertEquals(2, ReferencesFactory.getReferencesFactory().getReference("cero"));
     }
 }
